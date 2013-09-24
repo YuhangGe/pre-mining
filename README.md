@@ -18,7 +18,7 @@ About
 ------------
 @author: `Yuhang Ge (Software Insititute, Nanjing University)`  
 @email:   `abraham1@163.com`  
-@twitter: [@xiaoge_me](https://twitter.com/xiaoge_me)
+@twitter: [@xiaoge_me](https://twitter.com/xiaoge_me)  
 @website: [http://xiaoge.me](http://xiaoge.me)
 
 pre-mining

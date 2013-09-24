@@ -14,11 +14,21 @@ how to use
 8. choose the plugin `Pre-Log Miner Plugin` from the plugins list, and run.
 9. enjoy it! 
 
+log format
+------------
+pre-mining plugin takes `Event Logs with Pre-Tasks`. Each task has a set of pre-tasks. for example, the log of workflow below:  
+![example workflow](https://github.com/YuhangGe/pre-mining/raw/master/example-wokflow.png)
+
+is:  
+```
+[]A, [A]C, [A,C]D
+[]B, [B]C, [B,C]D
+```
+for more information about the log and the pre-mining algorithm, see my master paper: [Mining Process Models from Event Logs with Pre-Tasks](http://xiaoge.me) 
 About
 ------------
 @author: `Yuhang Ge (Software Insititute, Nanjing University)`  
 @email:   `abraham1@163.com`  
-@twitter: [@xiaoge_me](https://twitter.com/xiaoge_me)  
 @website: [http://xiaoge.me](http://xiaoge.me)
 
 pre-mining
@@ -37,10 +47,21 @@ pre-mining
 8. 选择插件`Pre-Log Miner Plugin`，执行。
 9. ProM将会以图的形式显示挖掘的结果。
 
+日志格式
+---------
+pre-mining插件挖掘的日志，需要满足每个task都有它前驱任务的集合。比如，下面的工作流：    
+![example workflow](https://github.com/YuhangGe/pre-mining/raw/master/example-wokflow.png)
+
+它的日志为：  
+ ```
+[]A, [A]C, [A,C]D
+[]B, [B]C, [B,C]D
+```
+关于日志以及该挖掘算法的详情，请查看我的硕士论文：[Mining Process Models from Event Logs with Pre-Tasks](http://xiaoge.me) 
+
 关于
 ------------
 作者：`白羊座小葛（南京大学软件学院）`  
 邮箱：abraham1@163.com  
 主页：[http://xiaoge.me](http://xiaoge.me)  
 微博：[@白羊座小葛](http://weibo.com/abeyuhang)
-

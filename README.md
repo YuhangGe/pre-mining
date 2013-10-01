@@ -16,14 +16,28 @@ how to use
 
 log format
 ------------
-pre-mining plugin takes `Event Logs with Pre-Tasks`. Each task has a set of pre-tasks. for example, the log of workflow below:  
-![example workflow](https://github.com/YuhangGe/pre-mining/raw/master/example-wokflow.png)
+pre-mining plugin takes `Event Logs with Pre-Tasks`. Each task has a set of pre-tasks. The extension of log file is `.pLog`. For example, the log of workflow below:  
+![example workflow](https://raw.github.com/YuhangGe/pre-mining/master/log-main-example-process.png)  
 
 is:  
 ```
-[]A, [A]C, [A,C]D
-[]B, [B]C, [B,C]D
+[]t1,[t1]t2,[t2]t4,[t4]t6,[t4]t7,[t6,t7]t11,[t2,t11]t12,[t12]t14
+[]t1,[t1]t2,[t2]t4,[t4]t5,[t4]t7,[t5,t7]t11,[t2,t11]t12,[t12]t14
+[]t1,[t1]t2,[t2]t4,[t4]t6,[t6]t9,[t9]t9,[t4]t7,[t7]t8,[t8]t7,[t9,t7]t11,[t2,t11]t12,[t12]t14
+[]t1,[t1]t2,[t2]t4,[t4]t5,[t5]t9,[t9]t9,[t4]t7,[t9,t7]t11,[t2,t11]t12,[t12]t14
+[]t1,[t1]t2,[t2]t4,[t4]t6,[t6]t10,[t10]t10,[t4]t7,[t10,t7]t11,[t2,t11]t12,[t12]t14
+[]t1,[t1]t2,[t2]t4,[t4]t5,[t5]t10,[t10]t10,[t4]t7,[t10,t7]t11,[t2,t11]t12,[t12]t14
+[]t1,[t1]t3,[t3]t4,[t4]t6,[t4]t7,[t6,t7]t11,[t3,t11]t13,[t13]t14
+[]t1,[t1]t3,[t3]t4,[t4]t5,[t4]t7,[t5,t7]t11,[t3,t11]t13,[t13]t14
+[]t1,[t1]t3,[t3]t4,[t4]t6,[t6]t9,[t9]t9,[t4]t7,[t7]t8,[t8]t7,[t9,t7]t11,[t3,t11]t13,[t13]t14
+[]t1,[t1]t3,[t3]t4,[t4]t5,[t5]t9,[t9]t9,[t4]t7,[t9,t7]t11,[t3,t11]t13,[t13]t14
+[]t1,[t1]t3,[t3]t4,[t4]t6,[t6]t10,[t10]t10,[t4]t7,[t10,t7]t11,[t3,t11]t13,[t13]t14
+[]t1,[t1]t3,[t3]t4,[t4]t5,[t5]t10,[t10]t10,[t4]t7,[t10,t7]t11,[t3,t11]t13,[t13]t14
 ```
+
+and the mined petri-net from the log is:  
+![mined workflow](https://raw.github.com/YuhangGe/pre-mining/master/log-main-example-mined.png)  
+
 for more information about the log and the pre-mining algorithm, see my master paper: [Mining Process Models from Event Logs with Pre-Tasks](http://xiaoge.me) 
 About
 ------------
@@ -49,14 +63,27 @@ pre-mining
 
 日志格式
 ---------
-pre-mining插件挖掘的日志，需要满足每个task都有它前驱任务的集合。比如，下面的工作流：    
-![example workflow](https://github.com/YuhangGe/pre-mining/raw/master/example-wokflow.png)
+pre-mining插件挖掘的日志，需要满足每个task都有它前驱任务的集合。日志文件的后缀名设定为`.pLog`。比如，下面的工作流：    
+![example workflow](https://raw.github.com/YuhangGe/pre-mining/master/log-main-example-process.png)
 
 它的日志为：  
  ```
-[]A, [A]C, [A,C]D
-[]B, [B]C, [B,C]D
+[]t1,[t1]t2,[t2]t4,[t4]t6,[t4]t7,[t6,t7]t11,[t2,t11]t12,[t12]t14
+[]t1,[t1]t2,[t2]t4,[t4]t5,[t4]t7,[t5,t7]t11,[t2,t11]t12,[t12]t14
+[]t1,[t1]t2,[t2]t4,[t4]t6,[t6]t9,[t9]t9,[t4]t7,[t7]t8,[t8]t7,[t9,t7]t11,[t2,t11]t12,[t12]t14
+[]t1,[t1]t2,[t2]t4,[t4]t5,[t5]t9,[t9]t9,[t4]t7,[t9,t7]t11,[t2,t11]t12,[t12]t14
+[]t1,[t1]t2,[t2]t4,[t4]t6,[t6]t10,[t10]t10,[t4]t7,[t10,t7]t11,[t2,t11]t12,[t12]t14
+[]t1,[t1]t2,[t2]t4,[t4]t5,[t5]t10,[t10]t10,[t4]t7,[t10,t7]t11,[t2,t11]t12,[t12]t14
+[]t1,[t1]t3,[t3]t4,[t4]t6,[t4]t7,[t6,t7]t11,[t3,t11]t13,[t13]t14
+[]t1,[t1]t3,[t3]t4,[t4]t5,[t4]t7,[t5,t7]t11,[t3,t11]t13,[t13]t14
+[]t1,[t1]t3,[t3]t4,[t4]t6,[t6]t9,[t9]t9,[t4]t7,[t7]t8,[t8]t7,[t9,t7]t11,[t3,t11]t13,[t13]t14
+[]t1,[t1]t3,[t3]t4,[t4]t5,[t5]t9,[t9]t9,[t4]t7,[t9,t7]t11,[t3,t11]t13,[t13]t14
+[]t1,[t1]t3,[t3]t4,[t4]t6,[t6]t10,[t10]t10,[t4]t7,[t10,t7]t11,[t3,t11]t13,[t13]t14
+[]t1,[t1]t3,[t3]t4,[t4]t5,[t5]t10,[t10]t10,[t4]t7,[t10,t7]t11,[t3,t11]t13,[t13]t14
 ```
+其挖掘出来的Petri Net在ProM中显示如下:  
+![mined workflow](https://raw.github.com/YuhangGe/pre-mining/master/log-main-example-mined.png)  
+
 关于日志以及该挖掘算法的详情，请查看我的硕士论文：[Mining Process Models from Event Logs with Pre-Tasks](http://xiaoge.me) 
 
 关于

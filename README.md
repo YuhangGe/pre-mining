@@ -36,7 +36,7 @@ is:
 ```
 
 and the mined petri-net from the log is:  
-![mined workflow](https://raw.github.com/YuhangGe/pre-mining/master/log-main-example-mined.png)  
+![mined workflow](https://raw.github.com/YuhangGe/pre-mining/master/log-main-example-mined.jpg)  
 
 for more information about the log and the pre-mining algorithm, see my master paper: [Mining Process Models from Event Logs with Pre-Tasks](http://xiaoge.me) 
 About
@@ -82,7 +82,7 @@ pre-mining插件挖掘的日志，需要满足每个task都有它前驱任务的
 []t1,[t1]t3,[t3]t4,[t4]t5,[t5]t10,[t10]t10,[t4]t7,[t10,t7]t11,[t3,t11]t13,[t13]t14
 ```
 其挖掘出来的Petri Net在ProM中显示如下:  
-![mined workflow](https://raw.github.com/YuhangGe/pre-mining/master/log-main-example-mined.png)  
+![mined workflow](https://raw.github.com/YuhangGe/pre-mining/master/log-main-example-mined.jpg)  
 
 关于日志以及该挖掘算法的详情，请查看我的硕士论文：[Mining Process Models from Event Logs with Pre-Tasks](http://xiaoge.me) 
 
